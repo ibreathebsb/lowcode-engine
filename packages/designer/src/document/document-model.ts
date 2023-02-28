@@ -114,6 +114,10 @@ export interface IDocumentModel extends Omit< IPublicModelDocumentModel<
   onChangeNodeVisible(fn: (node: INode, visible: boolean) => void): IPublicTypeDisposable;
 
   addWillPurge(node: INode): void;
+
+  removeWillPurge(node: INode): void;
+
+  getComponentMeta(componentName: string): IComponentMeta;
 }
 
 export class DocumentModel implements IDocumentModel {
